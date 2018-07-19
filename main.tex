@@ -1,0 +1,76 @@
+\documentclass[twoside]{svproc}
+
+\usepackage{polyglossia}
+\setmainlanguage[variant=american]{english}
+\usepackage{fontspec}
+\usepackage[onehalfspacing]{setspace}
+
+\usepackage{microtype}
+\usepackage{changepage}
+
+\makeatletter
+\newcommand{\@chapapp}{\relax}%
+\makeatother
+\usepackage[page]{appendix}
+\renewcommand{\appendixpagename}{Appendix:\\Evaluation Results}
+
+\usepackage{blindtext, lipsum, graphicx}
+\graphicspath{{./figs/}}
+
+\setlength\parindent{0pt}
+\frenchspacing
+
+\usepackage{algorithm2e}
+
+\usepackage{tabu}
+
+\usepackage[cmex10]{amsmath}
+% define custom math operators if you like
+% \DeclareMathOperator*{\argmax}{argmax}
+
+\begin{document}
+
+\setlength\parskip{7.5pt}
+%\setlength\intextsep{0pt}
+
+\title{Project Title}
+\titlerunning{The running project title}  % abbreviated title (for running head)
+
+\author{
+	Lastname1, Firstname1 \\
+	\textit{lastname1@uni-potsdam.de} \\
+	Lastname2, Firstname2 \\
+	\textit{lastname1@uni-potsdam.de}
+}
+\institute{Master's Program in \emph{Cognitive Systems}\\
+University of Potsdam}
+
+% use for special paper notices
+%\IEEEspecialpapernotice{(Individual Research Project)}
+
+% make the title area
+\maketitle
+
+
+\input{abstract}
+
+% Note that keywords are not normally used for peerreview papers.
+%\begin{keywords}
+%deep learning, reinforcement learning, language understanding
+%\end{keywords}
+
+\clearpage
+\input{introduction}
+\input{basics}
+\input{project}
+\input{evaluation}
+\input{conclusions}
+
+\bibliographystyle{plain}
+\bibliography{paperrefs}
+
+\begin{appendices}
+\input{appendix}
+\end{appendices}
+
+\end{document}
